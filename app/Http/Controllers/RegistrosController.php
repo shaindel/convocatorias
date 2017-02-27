@@ -13,8 +13,8 @@ class RegistrosController extends Controller
 {
     public function actualizarperfil(Request $request){
 
-        dd( request(["name", "apellidos", "email"]) );
-        dd(request()->all());
+        // dd( request(["name", "apellidos", "email"]) );
+        // dd(request()->all());
         $user = User::find(Auth::user()->id);        
         $user->fill($request->all());
         $user->save(); 
