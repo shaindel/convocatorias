@@ -82,13 +82,15 @@
               <a class="fright" href="{{ url('/home') }}">Regresar a las Convocatorias</a><p>
           </div>
 
-          @elseif ($aplico = DB::table('registros')->where('user_id', '=', Auth::user()->id)->exists())
-            
+          @elseif ($query = DB::table('registros')->where('user_id', '=', Auth::user()->id) ->exists() && $aplico = DB::table('registros')->where('convocatoria_id','=', $convocatoria->titulo) ->exists())
+
             <div class="row col-lg-12 m-top2"> Ya has aplicado a esta convocatoria</div>
 
           @else
             <div class="row col-lg-12 m-top2">
               <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+{{--               <input type="hidden" name="user_id" value="{{ Auth::user()->name }}">
+ --}}
               <input type="hidden" name="convocatoria_id" value="{{ $convocatoria->id }}">
               <input type="hidden" name="convocatoria_id" value="{{ $convocatoria->titulo }}">
               <button class="btn btn-custom" type="submit" value="Enviar">Enviar</button>

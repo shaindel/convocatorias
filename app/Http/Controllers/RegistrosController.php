@@ -13,7 +13,8 @@ class RegistrosController extends Controller
 {
     public function actualizarperfil(Request $request){
 
-        // dd( request(["name", "apellidos", "email"]) );
+        dd( request(["name", "apellidos", "email"]) );
+        dd(request()->all());
         $user = User::find(Auth::user()->id);        
         $user->fill($request->all());
         $user->save(); 
@@ -70,16 +71,16 @@ class RegistrosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
-    {
-        //
-        $registro= new Registro;
+    // public function store()
+    // {
+    //     //
+    //     $registro= new Registro;
 
-        Registro::create(request(['area','turno','user_id','convocatoria_id']));
+    //     Registro::create(request(['area','turno','user_id','convocatoria_id']));
         
-        $registro->save();
+    //     $registro->save();
         
-    }
+    // }
 
     /**
      * Display the specified resource.

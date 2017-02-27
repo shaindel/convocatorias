@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2 m-top10">
             <div class="panel panel-default">
-                <div class="panel-heading title-blue">Registro</div>
+                <div class="panel-heading title-blue">Actualizar</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('actualizar_perfil') }}">
                         {{ csrf_field() }}
@@ -51,11 +51,11 @@
                             </div>
                         </div>
 
-                        {{-- <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Contraseña</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" value="{{ Auth::user()->password }}"requiredz>
+                                <input id="password" type="password" class="form-control" name="password" value="{{ Auth::user()->password }}" requiredz>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -63,7 +63,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div> --}}
+                        </div>
 
                         {{-- <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Confirmar contraseña</label>
@@ -90,7 +90,7 @@
                             <label for="genero" class="col-md-4 control-label">Género</label>
 
                             <div class="col-md-6">
-                                <select class="form-control" id="genre" name="genero" requiredz>
+                                <select class="form-control" id="genre" name="genero" value="{{ Auth::user()->genero }}" requiredz>
                                     <option>Masculino</option>
                                     <option>Femenino</option>
                                     <option>Otro</option>
@@ -142,7 +142,20 @@
                                 @endif
                             </div>
                         </div>
-                       <div class="form-group{{ $errors->has('foto') ? ' has-error' : '' }}">
+                         <div class="form-group{{ $errors->has('celular') ? ' has-error' : '' }}">
+                            <label for="celular" class="col-md-4 control-label">celular</label>
+
+                            <div class="col-md-6">
+                                <input id="celular" type="tel" class="form-control" name="celular" value="{{ Auth::user()->celular }}" requiredz>
+
+                                @if ($errors->has('celular'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('celular') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+{{--                        <div class="form-group{{ $errors->has('foto') ? ' has-error' : '' }}">
                             <label for="foto" class="col-md-4 control-label">Imagen de perfil</label>
 
 
@@ -155,7 +168,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>                        
+                        </div>  --}}                       
                         <div class="form-group{{ $errors->has('facebook') ? ' has-error' : '' }}">
                             <label for="facebook" class="col-md-4 control-label">Facebook</label>
 
@@ -182,11 +195,12 @@
                                 @endif
                             </div>
                         </div>
+
                         <div class="form-group{{ $errors->has('profesion') ? ' has-error' : '' }}">
                             <label for="profesion" class="col-md-4 control-label">Último grado de estudios | Profesión</label>
 
                             <div class="col-md-6">
-                                <input id="profesion" type="text" class="form-control" name="profesion" requiredz>
+                                <input id="profesion" type="text" class="form-control" name="profesion" value="{{ Auth::user()->profesion }}" requiredz>
 
                                 @if ($errors->has('profesion'))
                                     <span class="help-block">
@@ -199,7 +213,7 @@
                             <label for="areas" class="col-md-4 control-label">Áreas de interés</label>
 
                             <div class="col-md-6">
-                                <input id="areas" type="text" class="form-control" name="areas" requiredz>
+                                <input id="areas" type="text" class="form-control" name="areas" value="{{ Auth::user()->areas }}" requiredz>
 
                                 @if ($errors->has('areas'))
                                     <span class="help-block">
@@ -213,7 +227,7 @@
 
                             <div class="col-md-6">
                             <small id="" class="form-text text-muted"> &middot; Si sabes de fotografía, redes sociales, etc, indícalo así podremos seleccionarte en un área donde puedas desarrollarte mejor. &middot; </small>
-                                <input id="habilidades" type="text" class="form-control" name="habilidades" requiredz>
+                                <input id="habilidades" type="text" class="form-control" name="habilidades" value="{{ Auth::user()->habilidades }}" requiredz>
 
                                 @if ($errors->has('habilidades'))
                                     <span class="help-block">
@@ -227,7 +241,7 @@
 
                             <div class="col-md-6">
                                 <small id="" class="form-text text-muted"> &middot; Esto te lo pedimos pues en cada eventos se proporciona playera del evento. &middot; </small>
-                                <select class="form-control" id="genre" name="talla" requiredz>
+                                <select class="form-control" id="genre" name="talla" value="{{ Auth::user()->talla }}" requiredz>
                                     <option>Chica</option>
                                     <option>Mediana</option>
                                     <option>Grande</option>
@@ -247,7 +261,7 @@
 
                             <div class="col-md-6">
                             <small id="" class="form-text text-muted"> &middot; ¿Porqué quieres ser voluntario? &middot; </small>
-                                <textarea name ="bio" class="form-control" id="exampleTextarea" rows="3"></textarea>
+                                <textarea name ="bio" class="form-control" id="exampleTextarea" placeholder="{{ Auth::user()->bio }}" rows="3"></textarea>
 
                                 @if ($errors->has('bio'))
                                     <span class="help-block">

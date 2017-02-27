@@ -27,6 +27,7 @@ class ConvocatoriasController extends Controller
     public function vista(Convocatoria $convocatoria)
 	{
 		// $convocatoria= Convocatoria::find($id);
+        
 		return view('convocatorias.vista', compact('convocatoria'));
     }
     
