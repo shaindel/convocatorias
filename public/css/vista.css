@@ -1,0 +1,127 @@
+/*VISTAS*/
+
+.yellow-box {
+background: #fcee47;
+padding: 0 1em;
+margin: 0 auto;
+text-align: center;
+box-shadow: 0 4px 4px lightgrey;
+width: 100%;
+}
+pre {
+display: block;
+padding: 0 !important;
+margin: 0 0 10px;
+color: #333;
+font-family: sans-serif;
+background-color: white !important;
+border: none !important;
+border-radius: 4px;
+white-space: pre-line;
+word-break: break-word !important;
+font-family: sans-serif !important;
+font-family: 'Raleway', sans-serif !important;}
+}
+
+body{background: #ededed}
+
+.navbar-default .navbar-nav>li>a {color: white;/*4510*/}
+.custom-hover.hover{color:white !important;}
+.logo-header{background: white;position: relative;max-width: 180px; margin-top: 9px;}
+.logo-container {background: white;padding: 0 10px 10px;height: 102px;position: absolute;     box-shadow: 0 2px 4px; /* left: 0; */}
+/* mobile /*
+.logo-container {text-align: center !important;position: inherit !important;}*/
+.navbar-default .navbar-toggle .icon-bar {background-color: #f82f7c; /*4537*/}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+background-color: #ffffff;/*bootstrap.css:395 */}
+button.navbar-toggle {background: #ededed;/*navbar.less -197*/}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+color: white;background-color: rgba(0, 0, 0, 0.11);/*bootstrap.css:4496 */}
+/*media movil /* .logo-header{width: 150px;}*/
+.carousel {height: 400px;margin-top: 7em;}
+.carousel .item {height: 400px;background-color: #777;}
+.carousel-inner > .item > img {position: absolute;top: 0;left: 0;min-width: 100%;height: 400px;}
+.col-lg-12.blue-wrapper {background: #0c5ba5;color: white;padding: 1em;}
+.col-lg-12.pink-wrapper {background: #f82f7c;color: white;padding: 1em;}
+.margin-bottom{margin-bottom: 2em}
+.centered{text-align: center;}
+p.title {/* text-align: center; font-size::1.5 em; padding-*/text-shadow: 1px 1px grey;padding-left: 2em;font-size: 2em;}
+.pink-letter{color: #f82f7c !important; text-transform: uppercase; font-weight: bold;}
+.blue-letter-closed{color: ##337ab7 !important; text-transform: uppercase; font-weight: bold; opacity: 0.8}
+.convo-title{
+background: rgba(252, 238, 71, 0.84);
+position: relative;
+margin: 0;
+padding: 1rem;
+margin-bottom: 2rem;
+color: #0c5ba5;
+text-shadow: 1px 1px 3px grey;}
+.convo-wrapper {
+background: white;
+padding: 1rem 0;
+}
+.convo-body {
+color: gray;
+font-size: 1.5rem;
+padding: 0.5em;
+}
+.convo-title-gray {
+background: rgba(171, 170, 170, 0.45);
+position: relative;
+margin: 0;
+padding: 1rem;
+margin-bottom: 2rem;
+color: white;
+text-shadow: 1px 1px 3px grey;
+}
+.light-weight{font-weight: 200}
+.medium-weight{font-weight: 400}
+.wrapper-white {
+padding: 1em 3em;
+background: white;
+line-height: 2rem;
+font-size: 15px;
+text-align: justify;
+}
+.element-closed{filter: grayscale(100%);opacity: 0.5;}
+.m-top2{margin-top: 2em}
+span.yellow-title {
+color: #fdef47;
+text-shadow: 1px 3px 4px darkgrey;
+}
+.m-top6 {
+margin-top: 6em;
+}
+.footertxt{color: #005ba2;
+font-weight: 200;
+background: white;font-size: 12px;}
+/*media mobil .wrapper-white{    padding: 1em;}*/
+/*media mobil p.title {padding-left: 0;text-align: center;}*/
+/*media mobil p.title {padding-left: 0 !important;text-align: center !important;}
+*/
+
+.box-txt {
+text-transform: uppercase;
+padding: 0.2em;
+font-size: 22px;
+color: #0c5ba5;
+text-shadow: 1px 2px 4px darkgrey;
+}
+.anchosetenta{width: 70% !important}
+.gray-wrapper {
+background: #ededed;
+padding: 1em;
+margin-top: 1em;
+font-weight: 200;
+}
+span#volsnumber {
+float: right;
+font-weight: 500;
+font-size: 1.2em;
+}
+.blue-txt{color: #0c5ba5;}
+.txtContainer{font-weight:300;}
+.customSmall{font-weight: 200;color: gray; float: left;}
+
+
+
