@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Hash;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -48,7 +49,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'nombre' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
         ]);
@@ -63,12 +64,13 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         // dd(request()->all());
-        return User::create([
-            'name' => $data['name'],
+        $user = [
+            'name' => $data['nombre'],
+            'nombre' => $data['nombre'],
             'apellidos' => $data['apellidos'],
             'email' => $data['email'],
-            // 'password' => Hash::make($request->newPassword),
-            'password' => bcrypt($data['password']),
+            'password' => Hash::make($data['password']),
+            // 'password' => bcrypt($data['password']),
             'birthday' => $data['birthday'],
             'genero' => $data['genero'],
             'pais' => $data['pais'],
@@ -81,6 +83,10 @@ class RegisterController extends Controller
             'areas' => $data['areas'],
             'habilidades' => $data['habilidades'],
             'talla' => $data['talla'],
-            'bio' => $data['bio']        ]);
+            'bio' => $data['bio']
+		];
+		// dd($user);
+		return User::create($user);
+		// return redirect( '/home' );
     }
 }

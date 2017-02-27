@@ -14,7 +14,7 @@
                             <label for="name" class="col-md-4 control-label">Nombre</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="nombre" value="{{ old('name') }}" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -155,7 +155,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>                        
+                        </div>
                         <div class="form-group{{ $errors->has('facebook') ? ' has-error' : '' }}">
                             <label for="facebook" class="col-md-4 control-label">Facebook</label>
 
@@ -168,7 +168,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>                                                
+                        </div>
                         <div class="form-group{{ $errors->has('twitter') ? ' has-error' : '' }}">
                             <label for="twitter" class="col-md-4 control-label">Twitter</label>
 
@@ -243,7 +243,7 @@
                         </div>
                         <div class="form-group{{ $errors->has('bio') ? ' has-error' : '' }}">
                             <label for="bio" class="col-md-4 control-label">Háblanos de ti</label>
-                            
+
 
                             <div class="col-md-6">
                             <small id="" class="form-text text-muted"> &middot; ¿Porqué quieres ser voluntario? &middot; </small>
@@ -255,7 +255,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>                                                                      
+                        </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-custom">
