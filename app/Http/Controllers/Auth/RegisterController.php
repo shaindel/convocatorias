@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Hash;
+use App\Mail\Bienvenido;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -28,6 +29,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
+
+
     protected $redirectTo = '/home';
 
     /**
@@ -38,6 +41,7 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        // 
     }
 
     /**
@@ -49,7 +53,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'nombre' => 'required|max:255',
+            'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
         ]);
@@ -64,9 +68,8 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         // dd(request()->all());
-        $user = [
-            'name' => $data['nombre'],
-            'nombre' => $data['nombre'],
+        $user = User::create([
+            'name' => $data['name'],
             'apellidos' => $data['apellidos'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -77,6 +80,7 @@ class RegisterController extends Controller
             'estado' => $data['estado'],
             'ciudad' => $data['ciudad'],
             'foto' => $data['foto'],
+            'celular' => $data['celular'],
             'facebook' => $data['facebook'],
             'twitter' => $data['twitter'],
             'profesion' => $data['profesion'],
@@ -84,9 +88,16 @@ class RegisterController extends Controller
             'habilidades' => $data['habilidades'],
             'talla' => $data['talla'],
             'bio' => $data['bio']
-		];
+		]);
 		// dd($user);
-		return User::create($user);
+        
+		// ($user);
+  //       return $user;
+        // return $user = Auth::user();
+        return $user;
+        \Mail::to($user)->send(new Bienvenido);
+
+        // return $user;
 		// return redirect( '/home' );
     }
 }

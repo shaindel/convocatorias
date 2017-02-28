@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'nhinfa@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'KRnalas'),
+        'address' => env('MAIL_FROM_ADDRESS', 'violetta.farias@voluntariosmexico.org'),
+        'name' => env('MAIL_FROM_NAME', 'Convocatorias - Voluntarios Mx'),
     ],
 
     /*
@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' =>  'nhinfa@gmail.com',
+    'username' => env('MAIL_USERNAME'),
 
-    'password' => 'liMineRatRab',
+    'password' => env('MAIL_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------------

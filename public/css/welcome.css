@@ -15,7 +15,7 @@ button.navbar-toggle {background: #ededed;/*navbar.less -197*/}
 color: white;background-color: rgba(0, 0, 0, 0.11);/*bootstrap.css:4496 */}
 /*media movil /* .logo-header{width: 150px;}*/
 .carousel {height: 400px;margin-top: 7em;}
-.carousel .item {height: 400px;background-color: #777;}
+.carousel .item {height: 400px;background-color: transparent!important;}
 .carousel-inner > .item > img {position: absolute;top: 0;left: 0;min-width: 100%;height: 400px;}
 .col-lg-12.blue-wrapper {background: #0c5ba5;color: white;padding: 1em;}
 .col-lg-12.pink-wrapper {background: #f82f7c;color: white;padding: 1em;}

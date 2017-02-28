@@ -14,7 +14,7 @@
                             <label for="name" class="col-md-4 control-label">Nombre</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="nombre" value="{{ old('name') }}" required autofocus>
+                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('apellidos') ? ' has-error' : '' }}">
-                            <label for="nombre" class="col-md-4 control-label">Apellidos</label>
+                            <label for="apellidos" class="col-md-4 control-label">Apellidos</label>
 
                             <div class="col-md-6">
                                 <input id="lastname" type="text" class="form-control" name="apellidos" value="{{ old('apellidos') }}" required autofocus>
@@ -156,6 +156,19 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group{{ $errors->has('celular') ? ' has-error' : '' }}">
+                            <label for="celular" class="col-md-4 control-label">Celular</label>
+
+                            <div class="col-md-6">
+                                <input id="celular" type="text" class="form-control" name="celular" required>
+
+                                @if ($errors->has('celular'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('celular') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>                         
                         <div class="form-group{{ $errors->has('facebook') ? ' has-error' : '' }}">
                             <label for="facebook" class="col-md-4 control-label">Facebook</label>
 
@@ -194,7 +207,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
+                        </div>                       
                         <div class="form-group{{ $errors->has('areas') ? ' has-error' : '' }}">
                             <label for="areas" class="col-md-4 control-label">Áreas de interés</label>
 

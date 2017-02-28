@@ -71,7 +71,7 @@
           <div><pre class="txtContainer"> {{$convocatoria->area}}</pre>
           <input type="text" name="area" placeholder="Escribe una opción"><br><br>
 
-          <p class="blue-txt"><strong>Elige un horario:</strong></p>
+          <p class="blue-txt"><strong>Elige un horario o día:</strong></p>
           <div><pre class="txtContainer"> {{$convocatoria->turno}}</pre>
           <input type="text" name="horario" placeholder="Escribe una opción">
 
